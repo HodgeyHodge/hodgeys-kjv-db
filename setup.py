@@ -35,5 +35,6 @@ setup(
         "Operating System :: OS Independent"
     ],
     packages=["hodgeys_kjv_db"],
+    package_data={'hodgeys_kjv_db': ['DATA/Bible.db']},
     include_package_data=True
 )

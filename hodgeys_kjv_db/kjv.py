@@ -11,13 +11,13 @@ from .exceptions import *
 
 class KJV:
     """
-    Instantiate the wrapper. TODO: make this docstring suck less.
+    Instantiate the wrapper.
     """
 
     def __init__(self, datapath=None):
         if datapath is None:
             this_file = os.path.abspath(os.path.dirname(__file__))
-            self.datapath = os.path.join(this_file, '..', 'DATA', 'Bible.db')
+            self.datapath = os.path.join(this_file, 'DATA', 'Bible.db')
         else:
             self.datapath = datapath
     
@@ -79,7 +79,6 @@ class KJV:
     def fetch_passage(self, testamentId: int, bookId: int, chapterId: int, verseId: int):
         """
         Get a Passage object, since some verses come pre-joined in compound passages.
-        TODO: think about validating input (negative ints for example wtf)
         """
         query = f"""
             SELECT
@@ -114,12 +113,6 @@ class KJV:
             if not row:
                 raise KJVIndexError(f"Can't find {chapterId}:{verseId} in book {bookId} of testament {testamentId}!")
             return Passage(testamentId, bookId, *row)
-
-    def fetch_verse(self, testamentId: int, bookId: int, chapterId: int, verseId: int):
-        """
-        Get a specified verse. TODO
-        """
-        pass
 
 class Book(NamedTuple):
     Testament: int
