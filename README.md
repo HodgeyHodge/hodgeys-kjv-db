@@ -1,5 +1,5 @@
 # Hodgeys KJV DB
-A SQLite database of the King James Bible, as compiled by me from [Project Gutenberg](https://www.gutenberg.org/files/10/10-h/10-h.htm); and an accompanying wrapper module.
+A SQLite database of the King James Bible, as compiled by me from [Project Gutenberg](https://www.gutenberg.org/files/10/10-h/10-h.htm); and an accompanying wrapper module, which I have [put up on PyPI](https://pypi.org/project/hodgeys-kjv-db/).
 
 ### Installation
 ```
