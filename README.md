@@ -27,3 +27,11 @@ for k, v in chapters.items():
 verse = kjv.fetch_passage(1, 1, 1, 1)
 print(verse)
 ```
+
+# Changelog
+
+### v1.1.0:
+- Deleted a rogue record in Jonah -- an accidentally digitized header in the original text.
+- Fixed ~160 metadata alignment issues where trailing verses within paragraph blocks were present but unindexed.
+- Indexed main database table against lookups.
+- Improved error messages.
